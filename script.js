@@ -2,6 +2,8 @@ let screenSize = 10
 const screen = document.querySelector('.screen')
 const goButton = document.querySelector('.create-button')
 const clearButton = document.querySelector('.clear')
+const blackButton = document.querySelector('.black-button')
+const rainbowButton = document.querySelector('.rainbow-button')
 
 
 function clearGrid () {
@@ -10,6 +12,7 @@ function clearGrid () {
 
 function draw(){
 this.style.backgroundColor="black";
+console.log(this)
 }
 
 function createGrid () {
@@ -26,5 +29,17 @@ function createGrid () {
   }
 }
 
+function drawBlack(){
+console.log(this.id)
+
+}
+
+function drawRainbow(){
+console.log(this.id)
+
+}
+
 goButton.addEventListener('click', createGrid)
 clearButton.addEventListener('click', clearGrid)
+blackButton.addEventListener('click', drawBlack)
+rainbowButton.addEventListener('click', drawRainbow)
