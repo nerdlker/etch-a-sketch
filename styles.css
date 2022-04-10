@@ -37,6 +37,10 @@ button:hover{
 
 }
 
+.eachPixel{
+  background-color: red;
+}
+
 
 .top-row{
   margin: auto;
