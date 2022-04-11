@@ -4,15 +4,30 @@ const goButton = document.querySelector('.create-button')
 const clearButton = document.querySelector('.clear')
 const blackButton = document.querySelector('.black-button')
 const rainbowButton = document.querySelector('.rainbow-button')
-
+const defaultColor = "grey"
+let currentColor = defaultColor
+let newColor = currentColor
 
 function clearGrid () {
   screen.innerHTML = ''
 }
 
+/// NOTE : DRAW will require and if else statement to determin a 'new color' which will then test for the 'current color'.
+
 function draw(){
-this.style.backgroundColor="black";
-console.log(this)
+  
+  if (newColor == 'black'){
+    currentColor = "black";
+  }
+  else if (newColor == 'rainbow'){
+    //generates random color
+
+    currentColor= "#" + ((1<<24)*Math.random() | 0).toString(16);
+  }
+  
+this.style.backgroundColor = currentColor;
+ 
+  
 }
 
 function createGrid () {
@@ -26,16 +41,18 @@ function createGrid () {
     // pixel.addEventListener('mousedown', draw)
     pixel.style.borderStyle = 'solid'
     screen.appendChild(pixel)
+    currentColor = defaultColor;
   }
 }
 
 function drawBlack(){
-console.log(this.id)
+
+  newColor="black";
 
 }
 
 function drawRainbow(){
-console.log(this.id)
+  newColor= "rainbow"
 
 }
 
