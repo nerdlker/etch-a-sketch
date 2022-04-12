@@ -23,13 +23,35 @@ button{
   
 
 }
+
+.clear{
+  background-color: #fff;
+  color: green;
+  border: 2px solid green;
+}
+.clear:hover{
+  background-color: #c9ffd0;
+}
+
 button:hover{
   background-color: #1db954;
 }
 
+.black-button{
+  background-color : black;
+}
+.black-button:hover{
+  background-color: #919191;
+}
+
+.rainbow-button:hover{
+   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:slidebg 5s linear infinite;
+  color:black;
+}
 .screen{
-  width : 800px;
-  height : 800px;
+  width : 600px;
+  height : 600px;
   margin : 20px auto;
   border-style: solid;
   display: grid;
@@ -38,21 +60,83 @@ button:hover{
 
 }
 
-.eachPixel{
-  background-color: red;
-}
+
 
 
 .button-list{
-  margin: auto;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .container{
   display: flex;
+  margin: 10px auto;
 }
 
 h1{
   text-align: center;
+  font-family : Roboto; sans-serif;
+  
+}
+.slider-value{
+  text-align:center;
+  justift-content: center;
+  margin: 10px auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+ 
+ 
+}
+.emptyspace{
+  margin:100px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin:20px auto 20px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.pixel{
+  
+}
+
+.showscreen{
+  border : 0.1px solid;
+}
+
+.grid-checkbox{
+   text-align:center;
+  justift-content: center;
+  margin: 10px auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+ 
 }

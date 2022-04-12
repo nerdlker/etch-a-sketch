@@ -14,28 +14,47 @@
   <h1>
     Etch a sketch
   </h1>
-
-<div class="container">
-  <div class="button-list">
-    <button class="create-button">
-      Create Grid
-    </button>
-    <button class="clear">
-      Reset
-    </button>
-    <button class="black-button" id="black">
-      Black
-    </button>
-    <button class="rainbow-button" id="rainbow">
-      Rainbow
-    </button>
+  
+  <div class="container">
+    <div class="button-list">
+  
+      <div class="slidecontainer">
+        <div class="slider-value">
+          <span id="slider-value"></span>
+        </div>
+        <input type="range" min="16" max="100" value="16" class="slider" id="myRange">
+  
+      </div>
+      <div class="grid-checkbox">
+        <input type="checkbox" id="checkmark" name="checkmark" value="yes">
+        <label for="checkmark">Show Grid</label>
+        
+      </div>
+  
+      <button class="create-button">
+        Create Grid
+      </button>
+      <button class="clear">
+        Reset
+      </button>
+      <button class="black-button" id="black">
+        Black
+      </button>
+      <button class="rainbow-button" id="rainbow">
+        Rainbow
+      </button>
+  
+      <button class="color-button">
+        Color
+      </button>
+    </div>
+    <div class="screen">
+  
+    </div>
+    <div class="emptyspace">
+  
+    </div>
   </div>
-  <div class="screen">
-
-
-  </div>
-</div>
-
 </body>
 
 </html>
