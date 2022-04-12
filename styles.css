@@ -144,7 +144,7 @@ h1{
 }
 
 .pixel{
-  
+  user-select: none;
 }
 
 .showscreen{

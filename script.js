@@ -26,11 +26,13 @@ function clearGrid () {
 
 }
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
 
 
-
-function draw(){   //Draw checks for color
-  
+function draw(e){   //Draw checks for color
+  if (e.type === 'mouseover' && !mouseDown) return
   if (newColor == 'black'){
     currentColor = "black";
   }
@@ -38,6 +40,10 @@ function draw(){   //Draw checks for color
     //generates random color
 
     currentColor= "#" + ((1<<24)*Math.random() | 0).toString(16);
+  }
+
+  else if (newColor == "white"){
+    currentColor ="white"
   }
   
 this.style.backgroundColor = currentColor;
@@ -57,8 +63,8 @@ function createGrid () {
     if (cb.checked == true)
     {pixel.classList.add("showscreen")}
     
-    // pixel.addEventListener('mouseover',draw)
-    pixel.addEventListener('mousedown', draw)
+    pixel.addEventListener('mouseover',draw)
+    // pixel.addEventListener('mousedown', draw)
     screen.appendChild(pixel)
     currentColor = defaultColor;
   }
@@ -66,9 +72,11 @@ function createGrid () {
 }
 
 function drawBlack(){
-
   newColor="black";
+}
 
+function eraser(){
+  newColor = "white";
 }
 
 function drawRainbow(){
@@ -90,7 +98,7 @@ goButton.addEventListener('click', createGrid)
 clearButton.addEventListener('click', clearGrid)
 blackButton.addEventListener('click', drawBlack)
 rainbowButton.addEventListener('click', drawRainbow)
-// colorButton.addEventListener("click", doThis)
+colorButton.addEventListener("click", eraser)
 
 
 /* 
