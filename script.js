@@ -9,7 +9,6 @@ const defaultColor = "grey";
 let currentColor = defaultColor;
 let newColor = currentColor;
 var slider = document.getElementById("myRange");
-let drawPixel = true;
 const cb = document.querySelector("#checkmark")
 
 
@@ -20,16 +19,17 @@ var output = document.getElementById("slider-value");
 output.innerHTML = `Grid Size: 16 x 16`;
 slider.oninput = function() {
   output.textContent = `Grid Size: ${this.value} x ${this.value}`;
-  
+  createGrid()
 }
 function clearGrid () {
   screen.innerHTML = ''
+
 }
 
 
-/// NOTE : DRAW will require and if else statement to determin a 'new color' which will then test for the 'current color'.
 
-function draw(){
+
+function draw(){   //Draw checks for color
   
   if (newColor == 'black'){
     currentColor = "black";
@@ -57,8 +57,8 @@ function createGrid () {
     if (cb.checked == true)
     {pixel.classList.add("showscreen")}
     
-    pixel.addEventListener('mouseover',draw)
-    // pixel.addEventListener('mousedown', draw)
+    // pixel.addEventListener('mouseover',draw)
+    pixel.addEventListener('mousedown', draw)
     screen.appendChild(pixel)
     currentColor = defaultColor;
   }
@@ -75,7 +75,7 @@ function drawRainbow(){
   newColor= "rainbow"
 
 }
-function gridToggle(){ //toggle grid
+function gridToggle(){  //toggle grid on and off with checkmark
   elements = screen.querySelectorAll(".pixel");
   for (let i = 0; i < elements.length; i++) {
   let show = elements[i].classList.toggle("showscreen")
@@ -97,8 +97,10 @@ rainbowButton.addEventListener('click', drawRainbow)
 todo :
 1. Add toggle for 'show grid' [DONE]
 2. wire up toggle to display/hide grid [DONE]
-3. add fonts
-4. decorate screen box better
+3. add fonts[DONE]
+4. decorate screen box better {DONE}
+5.Color Picker Implementation
+6.
 
 add keyboard shortcurts 
 

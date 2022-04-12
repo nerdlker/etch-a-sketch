@@ -50,19 +50,38 @@ button:hover{
   color:black;
 }
 .screen{
-  width : 600px;
-  height : 600px;
-  margin : 20px auto;
-  border-style: solid;
+  width: 600px;
+  height: 600px;
   display: grid;
-  
+  position: relative;
+  box-shadow:rgb(0 0 0 / 38%) 0px 3px 19px;
+  margin: 20px auto;
   /* z-index: 100; */
 
 }
 
+.header{
+  background-color: #fff;
+  /* background-color: #15883e; */
+  padding: 20px;
+  width:31%;
+  text-align: center;
+  justify-content: center;
+  margin: 20px auto;
+  border-radius: 50px;
+  
+  
+}
 
-
-
+h1{
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: #383838;
+  letter-spacing: 10px;
+  font-size: 60px;
+  margin: 0;
+  
+}
 .button-list{
   margin: 50px auto;
   display: flex;
@@ -72,17 +91,17 @@ button:hover{
 
 .container{
   display: flex;
-  margin: 10px auto;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
-h1{
-  text-align: center;
-  font-family : Roboto; sans-serif;
-  
-}
+
 .slider-value{
   text-align:center;
-  justift-content: center;
+  justify-content: center;
   margin: 10px auto;
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
@@ -129,12 +148,12 @@ h1{
 }
 
 .showscreen{
-  border : 0.1px solid;
+  border : 0.1px solid #c9c9c9;
 }
 
 .grid-checkbox{
    text-align:center;
-  justift-content: center;
+  justify-content: center;
   margin: 10px auto;
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
