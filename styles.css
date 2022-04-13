@@ -20,6 +20,7 @@ button{
   height: 48px;
   width: 100px;
   margin: 10px;
+  user-select: none;
   
 
 }
@@ -96,6 +97,7 @@ h1{
   gap: 100px;
   max-width: 1250px;
   margin: 0 auto;
+  
 }
 
 
@@ -187,6 +189,11 @@ input[type='color']{
   }
 
 
-.sketch-button{
-  
+footer{
+    margin-top: 80px;
+    margin-bottom:0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    opacity: 40%;
 }
