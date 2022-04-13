@@ -100,8 +100,8 @@ function gridToggle(){  //toggle grid on and off with checkmark
 }}
 
 function sketch(){
-  newColor = "sketch"
-
+  this.textContent= "Coming soon";
+  this.style.backgroundColor = "grey";
 }
 
 
@@ -115,8 +115,12 @@ colorButton.addEventListener('click', drawColor)
 rainbowButton.addEventListener('click', drawRainbow)
 eraseButton.addEventListener("click", eraser)
 colorButton.addEventListener("change",drawColor)
-sketchButton.addEventListener("click",sketch)
 
+sketchButton.addEventListener("mouseover",sketch)
+sketchButton.addEventListener("mouseout", function(){
+  this.textContent = "SKETCH";
+  this.style.backgroundColor = "#15883e"
+});
 /* 
 todo :
 1. Add toggle for 'show grid' [DONE]
