@@ -10,54 +10,59 @@
   <script src="script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  
+
   <div class="header">
-  <h1>
-    Etch a sketch
-  </h1>
-</div>
+    <h1>
+      Etch a sketch
+    </h1>
+  </div>
   <div class="container">
     <div class="button-list">
-  
+
       <div class="slidecontainer">
         <div class="slider-value">
           <span id="slider-value"></span>
         </div>
         <input type="range" min="16" max="64" value="16" class="slider" id="myRange">
-  
+
       </div>
       <div class="grid-checkbox">
         <input type="checkbox" id="checkmark" name="checkmark" value="yes">
         <label for="checkmark">Show Grid</label>
-        
+
       </div>
-  
-      <button class="create-button">
-        Create Grid
-      </button>
-      <button class="clear">
-        Clear
-      </button>
-      <button class="black-button" id="black">
-        Black
-      </button>
+
+      <div class="color-button">
+
+        <input type="color" id="color1">
+      </div>
+
+
       <button class="rainbow-button" id="rainbow">
         Rainbow
       </button>
-  
-      <button class="color-button">
-        Erase
+
+      <button class="erase-button">
+        Eraser
+      </button>
+
+      <button class="sketch-button">
+        Sketch
+      </button>
+
+      <button class="clear">
+        Clear
       </button>
 
     </div>
     <div class="screen">
-  
+
     </div>
-  
+
   </div>
 </body>
 
